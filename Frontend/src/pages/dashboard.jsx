@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../utils/api";
-import Card from "../components/Card";
+import Card from '../assets/components/card'; 
+
 
 const Dashboard = () => {
   const [summary, setSummary] = useState({

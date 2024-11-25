@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div> <!-- Ensure this div has the correct ID -->
   </body>
 </html>
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './styles.css'; // Ensure you have a global styles file if needed
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root') // Ensure the root div exists in public/index.html
-);

@@ -1,11 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App'; // Ensure App.js exists in the same directory
-import './styles.css'; // Import global styles
+// This is the API module
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root') // Ensure your `index.html` has an element with id="root"
-);
+export default {};
+const apiUrl = 'https://api.example.com';
+
+export const fetchProperties = async () => {
+  try {
+    const response = await fetch(`${apiUrl}/properties`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
+};
+
+export const fetchPropertyById = async (id) => {
+  try {
+    const response = await fetch(`${apiUrl}/properties/${id}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
+};
