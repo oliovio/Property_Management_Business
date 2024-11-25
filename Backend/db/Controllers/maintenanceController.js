@@ -1,4 +1,5 @@
-const connection = require('../db/connection');
+const connection = require('../connection');
+
 
 const addRequest = (req, res) => {
     const { tenant_id, description, status } = req.body;

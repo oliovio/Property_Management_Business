@@ -1,4 +1,5 @@
-const connection = require('../db/connection');
+const connection = require('../connection');
+
 
 const makePayment = (req, res) => {
     const { tenant_id, amount, payment_date, status } = req.body;
